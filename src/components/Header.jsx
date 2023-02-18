@@ -9,7 +9,7 @@ function Header() {
 
 	return (
 		<header>
-			<nav className='flex justify-evenly items-center h-20 md:h-28 max-w-[1240px] mx-auto px-4 text-white bg-orange-500'>
+			<nav className='flex justify-between lg:justify-evenly items-center h-20 md:h-28 px-4 text-white bg-orange-500'>
 				<a href='/'>
 					<img src={houseIcon} alt='Store logo' className='w-12 m-4' />
 				</a>
@@ -20,7 +20,7 @@ function Header() {
 					<li className='p-4'>Contact</li>
 				</ul>
 				<div onClick={handleNav} className='md:hidden '>
-					{!nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
+					{!nav ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
 				</div>
 				<div
 					className={`${
@@ -33,9 +33,15 @@ function Header() {
 						<img src={houseIcon} alt='Store logo' className='w-12 m-4' />
 					</a>
 					<ul className='pt-4'>
-						<li className='p-3 hover:bg-orange-700'>How We Work</li>
-						<li className='p-3 hover:bg-orange-700'>Services</li>
-						<li className='p-3 hover:bg-orange-700'>Free Quote</li>
+						<li className='p-3 hover:bg-orange-700 border-b border-b-gray-300'>
+							How We Work
+						</li>
+						<li className='p-3 hover:bg-orange-700 border-b border-b-gray-300'>
+							Services
+						</li>
+						<li className='p-3 hover:bg-orange-700 border-b border-b-gray-300'>
+							Free Quote
+						</li>
 						<li className='p-3 hover:bg-orange-700'>Contact</li>
 					</ul>
 				</div>
