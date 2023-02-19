@@ -14,8 +14,8 @@ function Summary() {
 	return (
 		<>
 			<h2 className='text-4xl mb-20'>Summary</h2>
-			<div className='bg-gray-100 md:w-[420px] h-[332px] md:p-10'>
-				<ul className='w-full h-full flex flex-col justify-between [&>li]:flex [&>li]:justify-between [&>li]:items-center'>
+			<div className='bg-gray-100 w-11/12 md:w-[420px] h-[332px] p-5 md:p-10'>
+				<ul className='w-full h-full flex flex-col justify-between [&>li]:flex [&>li]:justify-between [&>li]:items-center text-sm md:text-lg'>
 					<li>
 						Total Items <span>{total}</span>
 					</li>

@@ -15,7 +15,7 @@ function Shop() {
 					<Item item={item} key={`${item.name}${item.icon}`} />
 				))}
 			</div>
-			<div className='w-full flex justify-between items-center mt-16'>
+			<div className='w-[90%] md:w-full flex justify-between items-center my-16'>
 				<ClearBtn />
 				<CalculateBtn />
 			</div>

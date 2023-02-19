@@ -10,6 +10,14 @@
 
 @layer components {
 	.btn {
-		@apply px-4 py-2 text-black rounded-md outline-none active:scale-90 md:w-[222px] md:h-[60px];
+		@apply px-4 py-2 text-black rounded-md outline-none active:scale-90 w-[40%] md:w-[222px] h-[60px];
+	}
+
+	.icon {
+		@apply border-[3px] border-white rounded-[50%] p-2 hover:cursor-pointer;
+	}
+
+	.footer-link {
+		@apply py-2 hover:cursor-pointer text-sm md:text-[15px];
 	}
 }

@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import Shop from './components/Shop';
+import Footer from './components/Footer';
 import { ItemContextProvider } from './context/ItemContext';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
 			<ItemContextProvider>
 				<Shop />
 			</ItemContextProvider>
+			<Footer />
 		</div>
 	);
 }
