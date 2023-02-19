@@ -1,13 +1,6 @@
 import React from 'react';
 import useItem from '../hooks/useItem';
 
-// total items: array length
-// total m2: m2 total of all items
-// subtotal: 1m2 = 200
-// tax: 16% of subtotal
-// total: tax + subtotal
-// due today: 50% of total
-
 function Summary() {
 	const { total, size, subtotal, tax, totalPrice, duePrice } = useItem();
 
