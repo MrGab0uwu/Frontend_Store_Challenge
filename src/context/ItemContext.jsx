@@ -4,9 +4,12 @@ export const ItemContext = createContext();
 
 export const ItemContextProvider = ({ children }) => {
 	const [items, setItems] = useState([]);
-	const [size, setSize] = useState(0);
 	const [total, setTotal] = useState(0);
+	const [size, setSize] = useState(0);
 	const [subtotal, setSubtotal] = useState(0);
+	const [tax, setTax] = useState(0);
+	const [totalPrice, setTotalPrice] = useState(0);
+	const [duePrice, setDuePrice] = useState(0);
 
 	const saveItems = (item) => {
 		const newItem = [...items, item];
@@ -24,8 +27,25 @@ export const ItemContextProvider = ({ children }) => {
 
 	const calculate = () => {
 		setTotal(items.length);
-		setSize(getCubicSize(items));
-		setSubtotal(200 * size);
+		const newSize = getCubicSize(items);
+		setSize(newSize);
+		const newSubtotal = 200 * newSize;
+		setSubtotal(newSubtotal);
+		const newTax = newSubtotal * 0.16;
+		setTax(newTax);
+		const newTotal = newSubtotal + newTax;
+		setTotalPrice(newTotal);
+		setDuePrice(newTotal / 2);
+	};
+
+	const clear = () => {
+		setItems(0);
+		setTotal(0);
+		setSize(0);
+		setSubtotal(0);
+		setTax(0);
+		setTotalPrice(0);
+		setDuePrice(0);
 	};
 
 	const getCubicSize = (items) => {
@@ -43,7 +63,11 @@ export const ItemContextProvider = ({ children }) => {
 				total,
 				size,
 				subtotal,
+				tax,
+				totalPrice,
+				duePrice,
 				calculate,
+				clear,
 			}}
 		>
 			{children}

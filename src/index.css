@@ -7,3 +7,9 @@
 		font-family: 'Poppins', sans-serif;
 	}
 }
+
+@layer components {
+	.btn {
+		@apply px-4 py-2 text-black rounded-md outline-none active:scale-90 md:w-[222px] md:h-[60px];
+	}
+}

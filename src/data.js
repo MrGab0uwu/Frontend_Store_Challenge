@@ -14,52 +14,52 @@ import {
 export const items = [
 	{
 		name: 'beds',
-		size: 1,
+		size: 1.2,
 		icon: bed,
 	},
 	{
 		name: 'refrigerador',
-		size: 5,
+		size: 1,
 		icon: refridegator,
 	},
 	{
 		name: 'furniture',
-		size: 2,
+		size: 0.5,
 		icon: furniture,
 	},
 	{
 		name: 'oven',
-		size: 3,
+		size: 0.6,
 		icon: oven,
 	},
 	{
 		name: 'sofa',
-		size: 4,
+		size: 1.5,
 		icon: sofa,
 	},
 	{
 		name: 'tv',
-		size: 5,
+		size: 0.25,
 		icon: tv,
 	},
 	{
 		name: 'washer-dryer',
-		size: 7,
+		size: 0.5,
 		icon: washer,
 	},
 	{
 		name: 'dining',
-		size: 4,
+		size: 2,
 		icon: dining,
 	},
 	{
 		name: 'desk',
-		size: 5,
+		size: 0.75,
 		icon: desk,
 	},
 	{
 		name: 'wardrobe',
-		size: 5,
+		size: 3.2,
 		icon: wardrobe,
 	},
 ];
