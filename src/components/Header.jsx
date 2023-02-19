@@ -3,21 +3,25 @@ import houseIcon from '../assets/cil_house.svg';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 
 function Header() {
-	const [nav, setNav] = useState(false);
+	const [nav, setNav] = useState(true);
 
 	const handleNav = () => setNav(!nav);
 
 	return (
 		<header>
-			<nav className='flex justify-between lg:justify-evenly items-center h-20 md:h-28 px-4 text-white bg-orange-500'>
+			<nav className='flex justify-between lg:justify-evenly items-center h-20 md:h-36 px-4 text-white bg-orange-500'>
 				<a href='/'>
-					<img src={houseIcon} alt='Store logo' className='w-12 m-4' />
+					<img
+						src={houseIcon}
+						alt='Store logo'
+						className='w-12 md:w-20 m-4 hover:cursor-pointer'
+					/>
 				</a>
 				<ul className='hidden md:flex'>
-					<li className='p-4'>How We Work</li>
-					<li className='p-4'>Services</li>
-					<li className='p-4'>Free Quote</li>
-					<li className='p-4'>Contact</li>
+					<li className='p-4 hover:cursor-pointer'>How We Work</li>
+					<li className='p-4 hover:cursor-pointer'>Services</li>
+					<li className='p-4 hover:cursor-pointer'>Free Quote</li>
+					<li className='p-4 hover:cursor-pointer'>Contact</li>
 				</ul>
 				<div onClick={handleNav} className='md:hidden '>
 					{!nav ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
